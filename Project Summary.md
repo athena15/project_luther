@@ -2,8 +2,6 @@
 
 I recently set out to build a model to predict home prices in Seattle, WA. Granted, this was not an easy task. With all of the different features any particular home may have compared to another, real estate can seem tough to value. Still, any home has features that undeniably make it more, or less, valuable - e.g. square footage.
 
-
-
 For most homeowners, the Zillow "Zestimate" is the closest thing they have to an objective valutation of their home. Many people use the Zestimate as a measure of their home's equity, and by proxy their net worth. Given the data set we had availble, my goal was to see if it was possible to meet, or even beat, the vaunted "Zestimate" in the city of Seattle.
 
 ### Data
@@ -20,8 +18,6 @@ We started with a dataset of homes that were sold in 2015 from Kaggle.com. Featu
 
 and over a dozen over variables. This data set gave us a good head start, but the objective features of a home don't tell the full story. Our next step was to do some additional feature engineering that would help us better predict what price each home was sold for.
 
-
-
 ### Feature Engineering & Web Scraping
 
 Our first step was to query the Google Maps to get the closest possible addresses from latitude/longitude info provided in the original dataset. Then, we used these addresses to get a list of the exact census tract where each of the 21,000 houses was located. We then took it one step further, using Census Data from the 2015 American Community Survey (ACS) to get Median Household Income for each row in the data set.
@@ -29,8 +25,6 @@ Our first step was to query the Google Maps to get the closest possible addresse
 We also used web scraping to further the accuracy of our data set. We chose to scrape data from Walk Score (www.walkscore.com), since it is a well-known and respected metric to describe the walkability of a given home's neighborhood. We hypothesized that walkability would be a good predictor of a home's value - in short, people are willing to pay more for homes that are near the places where they work and play.
 
 In addition to the prototypical "Walk Score," the site has other scores we thought would also be useful. Along with a "Bike Score" and "Transit Score", we thought that a metric of particular importance would be the Crime Grades that the site offers, which are based upon their study of personal and property crime histories for each area. After adding these to our data set, we felt we had enough information to begin our analysis.
-
-
 
 ### Methodology & Results
 
