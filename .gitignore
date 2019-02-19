@@ -2,6 +2,10 @@
 # Created by https://www.gitignore.io/api/python,pycharm,jupyternotebook
 # Edit at https://www.gitignore.io/?templates=python,pycharm,jupyternotebook
 
+.DS_Store
+.idea/
+Data/.DS_Store
+
 ### JupyterNotebook ###
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
